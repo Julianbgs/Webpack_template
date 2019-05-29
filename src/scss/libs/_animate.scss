@@ -1,0 +1,135 @@
+.animate {
+  /* Выберем анимацию */
+  animation-name: movingBox;
+
+  /* Укажем длительность анимации */
+  animation-duration: 1300ms;
+
+  /* Укажем - сколько раз мы хотим
+      повторить анимацию */
+  animation-iteration-count: 1;
+
+  /* Это приводит к выполнению анимации
+      в обратном порядке на каждой нечётной итерации */
+  //animation-direction: alternate;
+  opacity: 1!important;
+}
+
+@keyframes movingBox {
+  0% {
+    transform: translate(0, 200px);
+    opacity: 0.4;
+  }
+
+  //25% {
+  //  opacity: 0.9;
+  //}
+  //
+  //50% {
+  //  transform: translate(150px, 200px);
+  //  opacity: 0.2;
+  //}
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+.r-animate {
+  /* Выберем анимацию */
+  animation-name: rightAnimate;
+
+  /* Укажем длительность анимации */
+  animation-duration: 1300ms;
+
+  /* Укажем - сколько раз мы хотим
+      повторить анимацию */
+  animation-iteration-count: 1;
+
+  /* Это приводит к выполнению анимации
+      в обратном порядке на каждой нечётной итерации */
+  //animation-direction: alternate;
+  opacity: 1!important;
+}
+
+@keyframes rightAnimate {
+  0% {
+    transform: translate(200px, 0);
+    opacity: 0.4;
+  }
+
+  //25% {
+  //  opacity: 0.9;
+  //}
+  //
+  //50% {
+  //  transform: translate(150px, 200px);
+  //  opacity: 0.2;
+  //}
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+.l-animate {
+  /* Выберем анимацию */
+  animation-name: leftAnimate;
+
+  /* Укажем длительность анимации */
+  animation-duration: 1300ms;
+
+  /* Укажем - сколько раз мы хотим
+      повторить анимацию */
+  animation-iteration-count: 1;
+
+  /* Это приводит к выполнению анимации
+      в обратном порядке на каждой нечётной итерации */
+  //animation-direction: alternate;
+  opacity: 1!important;
+}
+
+@keyframes leftAnimate {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0.4;
+  }
+  //50%{
+  //  transform: translateX(8%);
+  //}
+  //65%{
+  //  transform: translateX(-4%);
+  //}
+  //80%{
+  //  transform: translateX(4%);
+  //}
+  //95%{
+  //  transform: translateX(-2%);
+  //}
+  100% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+}
+
+.animate-stop {
+  animation-name: stopAnimate;
+  animation-duration: 1300ms;
+  animation-iteration-count: 1;
+  opacity: 1!important;
+}
+
+@keyframes stopAnimate {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.opacity {
+  opacity: 0;
+}

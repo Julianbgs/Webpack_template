@@ -1,0 +1,125 @@
+.team {
+  display: flex;
+  width: 100%;
+  padding-bottom: 130px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &__elem-t {
+    position: absolute;
+    top: 65px;
+    left: 45%;
+    width: 117px;
+    height: 176px;
+    background-image: url("../img/simple-t.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include breakpoint(max-width 660px) {
+      left: 33%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin-top: 135px;
+    color: #222;
+    font-family: $GothamMedium;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 45px;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    color: #222;
+    font-family: $GothamBook;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 37px;
+  }
+
+  &__box {
+    width: 100%;
+    margin-top: 75px;
+  }
+
+  &__elem {
+    position: relative;
+    width: 100%;
+
+      &-img {
+        width: 270px;
+        height: 410px;
+        overflow: hidden;
+
+        @include breakpoint(max-width 1024px) {
+        margin: 0 auto;
+        }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+      }
+
+    &-wrap {
+      position: absolute;
+      bottom: -45px;
+      left: 12%;
+      padding: 20px 40px 0 40px;
+      box-sizing: border-box;
+      background-color: white;
+
+      @include breakpoint(max-width 1024px) {
+        left: 26%;
+      }
+
+      @include breakpoint(max-width 660px) {
+        left: 18%;
+      }
+
+        &--title {
+          width: 100%;
+          text-align: center;
+          color: #11749e;
+          font-family: $GothamMedium;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          text-transform: uppercase;
+          margin-bottom: 2px;
+          margin-top: 0;
+        }
+
+      &--post {
+        width: 100%;
+        text-align: center;
+        color: black;
+        font-family: $GothamMedium;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.adaptive {
+  @include breakpoint(max-width 1024px) {
+    width: 50%;
+    margin-bottom: 70px;
+  }
+
+  @include breakpoint(max-width 660px) {
+    width: 100%;
+  }
+}

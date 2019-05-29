@@ -1,0 +1,208 @@
+.about {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+
+  &__block-bg {
+    background-color: #222;
+    height: 488px;
+
+    &--mod {
+      background-color: #f3f3f3;
+    }
+  }
+
+  &__block {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-right: 120px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &--mod {
+      left: 60%;
+      width: 40%;
+      padding-right: 0;
+
+      @include breakpoint(max-width 990px) {
+        left: 0;
+
+      }
+
+      @include breakpoint(max-width 660px) {
+        left:0;
+      }
+    }
+
+    @include breakpoint(max-width 990px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    width: 38%;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    @include breakpoint(max-width 1024px) {
+      width: 45%;
+    }
+
+    @include breakpoint(max-width 990px) {
+      width: 60%;
+    }
+
+    @include breakpoint(max-width 660px) {
+      width: 50%;
+    }
+  }
+
+  &__date {
+    position: relative;
+    color: white;
+    font-family: $GothamBook;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 0;
+
+    &--mod {
+      color: #222222;
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: -21px;
+        content: "";
+        display: inline;
+        width: 1px;
+        height: 18px;
+        background-color: #222222!important;
+
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      right: -20px;
+      content: "";
+      display: inline;
+      width: 1px;
+      height: 18px;
+      background-color: white;
+
+      @include breakpoint(max-width 990px) {
+        right: -9px;
+      }
+    }
+  }
+
+  &__place {
+    color: white;
+    font-family: $GothamBook;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 0;
+
+    &--mod {
+      color: #222222;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-family: $GothamMedium;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 35px;
+
+    &--mod {
+      color: #222222;
+    }
+  }
+
+  &__descr {
+    color: white;
+    font-family: $MyraidPro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+
+    &--mod {
+      color: #222222;
+    }
+  }
+
+  &__sub-descr {
+    color: white;
+    font-family: $MyraidPro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &--mod {
+      color: #222222;
+    }
+  }
+
+  &__img{
+    position: relative;
+    float: left;
+    width: 50%;
+
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 488px;
+    left: 100%;
+    top: -377px;
+    position: absolute;
+    background-image: url("../img/about-img1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(max-width 1920px) {
+      top: -382px
+    }
+
+    @include breakpoint(max-width 990px) {
+      display: none;
+    }
+
+    @include breakpoint(max-width 660px) {
+    position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__new-bg {
+    width: 100%;
+    height: 488px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: url("../img/about-img2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(max-width 990px) {
+   display: none;
+    }
+
+  }
+}

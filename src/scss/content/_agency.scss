@@ -1,0 +1,96 @@
+.agency {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #11749e;
+  padding-bottom: 130px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &__double-elem {
+    position: absolute;
+    width: 185px;
+    height: 176px;
+    top: 111px;
+    left: 42%;
+    background-image: url("../img/double.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include breakpoint(max-width 660px) {
+      left: 25%;
+      top: 60px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin-top: 170px;
+    font-family: $GothamMedium;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: white;
+
+    @include breakpoint(max-width 660px) {
+      margin-top: 75px;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    margin-top: 130px;
+
+    @include breakpoint(max-width 660px) {
+      margin-top: 90px;
+    }
+  }
+
+  &__elem {
+    position: relative;
+
+    @include breakpoint(max-width 990px) {
+      margin-bottom: 25px;
+    }
+
+
+    &-img {
+      margin: 0 auto;
+      width: 133px;
+      height: 133px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-title {
+      width: 100%;
+      margin-top: 15px;
+      text-align: center;
+      color: white;
+      font-family: $GothamMedium;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 36px;
+      text-transform: uppercase;
+    }
+
+    &-descr {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+      font-family: $MyraidPro;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
